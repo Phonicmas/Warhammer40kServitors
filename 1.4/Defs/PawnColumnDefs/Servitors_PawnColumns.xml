@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <PawnColumnDef>
+    <defName>BEWH_ServitorAllowedArea</defName>
+    <label>allowed area</label>
+    <workerClass>Servitors40k.PawnColumnWorker_AllowedArea_Servitor</workerClass>
+    <sortable>true</sortable>
+  </PawnColumnDef>
+
+</Defs>

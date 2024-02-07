@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BasePawn" Name="BEWH_BaseServitorRace" Abstract="True">
+    <thingClass>Servitors40k.Servitor</thingClass>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <statBases>
+      <PsychicSensitivity>0</PsychicSensitivity>
+      <GlobalLearningFactor>0</GlobalLearningFactor>
+      <ToxicResistance>1</ToxicResistance>
+      <ToxicEnvironmentResistance MayRequire="Ludeon.RimWorld.Biotech">1</ToxicEnvironmentResistance>
+      <Flammability>0.1</Flammability>
+      <ComfyTemperatureMin>-100</ComfyTemperatureMin>
+      <ComfyTemperatureMax>250</ComfyTemperatureMax>
+      <MeatAmount>0</MeatAmount>
+      <WorkSpeedGlobal>0.5</WorkSpeedGlobal>
+      <ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.4</ArmorRating_Sharp>
+      <ArmorRating_Heat>1.65</ArmorRating_Heat>
+      <MoveSpeed>4</MoveSpeed>
+    </statBases>
+    <receivesSignals>true</receivesSignals>
+    <race>
+      <body>Human</body>
+      <fleshType>Mechanoid</fleshType>
+      <allowedOnCaravan>true</allowedOnCaravan>
+      <needsRest>false</needsRest>
+      <hasGenders>false</hasGenders>
+      <foodType>None</foodType>
+      <lifeExpectancy>5000</lifeExpectancy>
+      <bloodDef>Filth_MachineBits</bloodDef>
+      <intelligence>ToolUser</intelligence>
+      <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+      <baseBodySize>1</baseBodySize>
+      <baseHealthScale>1</baseHealthScale>
+      <soundCallIntervalRange>3000~15000</soundCallIntervalRange>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>40</minAge>
+          <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+          <soundCall>Pawn_Mech_Scyther_Call</soundCall>
+        </li>
+      </lifeStageAges>
+      <mechFixedSkillLevel>8</mechFixedSkillLevel>
+    </race>
+    <butcherProducts>
+      <Steel>30</Steel>
+      <!-- Human Meat + components -->
+    </butcherProducts>
+    <tools>
+      <li>
+        <label>left fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.5</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+      </li>
+      <li>
+        <label>right fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.5</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+      </li>
+    </tools>
+    <inspectorTabs Inherit="false">
+      <li>ITab_Pawn_Health</li>
+      <li>ITab_Pawn_Character</li>
+      <li>ITab_Pawn_FormingCaravan</li>
+      <li>ITab_Pawn_Gear</li>
+      <li>ITab_Pawn_Log</li>
+    </inspectorTabs>
+  </ThingDef>
+
+  <PawnKindDef Name="BEWH_BaseServitorPawn" Abstract="True">
+    <allowInMechClusters>false</allowInMechClusters>
+  </PawnKindDef>
+
+</Defs>

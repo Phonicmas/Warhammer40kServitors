@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+<ServitorNoPowerEject>{PAWN_labelShort} was ejected from a ????? due to lack of power.</ServitorNoPowerEject>
+<InsertPersonServitorCreationDesc>Insert a person into the ???. This will transform them into a Servitor.</InsertPersonServitorCreationDesc>
+
+<Colonist>Colonist</Colonist>
+<Slave>Slave</Slave>
+<Prisoner>Prisoner</Prisoner>
+
+<SelectSpecialization>Select Specialization</SelectSpecialization>
+<SelectSpecializationDesc>Select the specialization of the next servitor to be created.</SelectSpecializationDesc>
+
+<CreatingServitorFrom>Creating servitor out of {0}</CreatingServitorFrom>
+
+<UpgradeServitor>Upgrade {0} with {1}</UpgradeServitor>
+
+<UpgradeServitorLabel>Upgrade Servitor</UpgradeServitorLabel>
+
+<EjectServitor>Eject servitor</EjectServitor>
+<EjectServitorDesc>Eject servitor from the machine</EjectServitorDesc>
+
+</LanguageData>

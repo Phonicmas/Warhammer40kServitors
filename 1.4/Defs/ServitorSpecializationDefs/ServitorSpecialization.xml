@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Servitor Gun -->
+  <Servitors40k.ServitorSpecializationDef>
+    <defName>BEWH_ServitorGun</defName>
+    <label>Servitor - Gun</label>
+    <description>A servitor made for combat, this one can be outfitted with ranged weaponry.</description>
+    <pawnKind>BEWH_ServitorGun</pawnKind>
+    <skillLevels>
+      <li>
+        <key>Shooting</key>
+        <value>6</value>
+      </li>
+    </skillLevels>
+    <startingEquipment>Gun_ChargeBlasterHeavy</startingEquipment>
+  </Servitors40k.ServitorSpecializationDef>
+
+  <!-- Servitor Melee -->
+  <Servitors40k.ServitorSpecializationDef>
+    <defName>BEWH_ServitorMelee</defName>
+    <label>Servitor - Melee</label>
+    <description>A servitor made for combat, this one can be outfitted with melee weaponry.</description>
+    <pawnKind>BEWH_ServitorMelee</pawnKind>
+    <skillLevels>
+      <li>
+        <key>Melee</key>
+        <value>6</value>
+      </li>
+    </skillLevels>
+    <startingEquipment>MeleeWeapon_Mace</startingEquipment>
+  </Servitors40k.ServitorSpecializationDef>
+
+  <!-- Servitor Utility -->
+  <Servitors40k.ServitorSpecializationDef>
+    <defName>BEWH_ServitorUtility</defName>
+    <label>Servitor - Utility</label>
+    <description>A servitor made for utility, this one can be outfitted with various cleaning and hauling tools.</description>
+    <pawnKind>BEWH_ServitorUtility</pawnKind>
+    <givesTrait>BEWH_WorkerServitor</givesTrait>
+  </Servitors40k.ServitorSpecializationDef>
+
+  <!-- Servitor Medical -->
+  <Servitors40k.ServitorSpecializationDef>
+    <defName>BEWH_ServitorMedical</defName>
+    <label>Servitor - Medical</label>
+    <description>A servitor made for surgery, this one can be outfitted with various medical tools.</description>
+    <pawnKind>BEWH_ServitorMedical</pawnKind>
+    <givesTrait>BEWH_WorkerServitor</givesTrait>
+  </Servitors40k.ServitorSpecializationDef>
+
+  <!-- Servitor Mining -->
+  <Servitors40k.ServitorSpecializationDef>
+    <defName>BEWH_ServitorMining</defName>
+    <label>Servitor - Miner</label>
+    <description>A servitor made for mining, this one can be outfitted with various mining tools.</description>
+    <pawnKind>BEWH_ServitorMining</pawnKind>
+    <givesTrait>BEWH_WorkerServitor</givesTrait>
+  </Servitors40k.ServitorSpecializationDef>
+
+  <!-- Servitor Planting -->
+  <Servitors40k.ServitorSpecializationDef>
+    <defName>BEWH_ServitorPlanting</defName>
+    <label>Servitor - Planting</label>
+    <description>A servitor made for planting, this one can be outfitted with various planting tools.</description>
+    <pawnKind>BEWH_ServitorPlanting</pawnKind>
+    <givesTrait>BEWH_WorkerServitor</givesTrait>
+  </Servitors40k.ServitorSpecializationDef>
+
+  <!-- Servitor Construction -->
+  <Servitors40k.ServitorSpecializationDef>
+    <defName>BEWH_ServitorConstruction</defName>
+    <label>Servitor - Constructor</label>
+    <description>A servitor made for construction, this one can be outfitted with various building tools.</description>
+    <pawnKind>BEWH_ServitorConstruction</pawnKind>
+    <givesTrait>BEWH_WorkerServitor</givesTrait>
+  </Servitors40k.ServitorSpecializationDef>
+
+  <!-- Servitor Crafter -->
+  <Servitors40k.ServitorSpecializationDef>
+    <defName>BEWH_ServitorCrafting</defName>
+    <label>Servitor - Crafter</label>
+    <description>A servitor made for crafting, this one can be outfitted with various crafting tools.</description>
+    <pawnKind>BEWH_ServitorCrafting</pawnKind>
+    <givesTrait>BEWH_WorkerServitor</givesTrait>
+  </Servitors40k.ServitorSpecializationDef>
+
+</Defs>

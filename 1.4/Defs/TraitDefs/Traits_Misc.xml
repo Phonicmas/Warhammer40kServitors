@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <TraitDef>
+        <defName>BEWH_WorkerServitor</defName>
+        <commonality>0</commonality>
+        <degreeDatas>
+            <li>
+                <label>worker servitor</label>
+                <description>{PAWN_nameDef} is a servitor meant for only working, and as such it is unable to perform violent actions</description>
+            </li>
+        </degreeDatas>
+        <disabledWorkTags>
+            <li>Violent</li>
+        </disabledWorkTags>
+    </TraitDef>
+
+</Defs>

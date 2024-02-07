@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BEWH_BaseServitorRace">
+    <defName>BEWH_ServitorMining</defName>
+    <label>Servitor - Mining</label>
+    <description>Servitor built for mining purposes.</description>
+    <race>
+      <thinkTreeMain>BEWH_Servitor_Worker</thinkTreeMain>
+      <mechEnabledWorkTypes>
+        <li>Mining</li>
+      </mechEnabledWorkTypes>
+    </race>
+  </ThingDef>
+
+  <PawnKindDef ParentName="BEWH_BaseServitorPawn">
+    <defName>BEWH_ServitorMining</defName>
+    <label>Servitor - Mining</label>
+    <race>BEWH_ServitorMining</race>
+    <combatPower>50</combatPower>
+    <isFighter>false</isFighter>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/Lancer</texPath>
+          <drawSize>1.5</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+</Defs>

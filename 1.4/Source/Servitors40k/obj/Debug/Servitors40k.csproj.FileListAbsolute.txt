@@ -1,0 +1,4 @@
+C:\Steam\steamapps\common\RimWorld\Mods\Warhammer40kServitors\1.4\Source\Servitors40k\obj\Debug\Servitors40k.csproj.AssemblyReference.cache
+C:\Steam\steamapps\common\RimWorld\Mods\Warhammer40kServitors\1.4\Source\Servitors40k\obj\Debug\Servitors40k.csproj.CoreCompileInputs.cache
+C:\Steam\steamapps\common\RimWorld\Mods\Warhammer40kServitors\1.4\Assemblies\Servitors40k.dll
+C:\Steam\steamapps\common\RimWorld\Mods\Warhammer40kServitors\1.4\Source\Servitors40k\obj\Debug\Servitors40k.dll

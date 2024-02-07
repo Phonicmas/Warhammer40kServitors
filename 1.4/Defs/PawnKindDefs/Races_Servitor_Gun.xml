@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BEWH_BaseServitorRace">
+    <defName>BEWH_ServitorGun</defName>
+    <label>Servitor - Gun</label>
+    <description>Servitor built for ranged combat.</description>
+    <race>
+      <thinkTreeMain>BEWH_Servitor_Violent</thinkTreeMain>
+    </race>
+  </ThingDef>
+
+  <PawnKindDef ParentName="BEWH_BaseServitorPawn">
+    <defName>BEWH_ServitorGun</defName>
+    <label>Servitor - Gun</label>
+    <race>BEWH_ServitorGun</race>
+    <combatPower>180</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/Lancer</texPath>
+          <drawSize>1.5</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+</Defs>

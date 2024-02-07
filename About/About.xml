@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Warhammer 40.000 - Servitors</name>
+	<author>Phonicmas</author>
+	<supportedVersions>
+		<li>1.4</li>
+	</supportedVersions>
+	<packageId>Phonicmas.40kServitors</packageId>
+	<description>
+		Warhammer 40k - Servitor module.
+	</description>
+	<modDependencies>
+		<li>
+			<packageId>Phonicmas.40kCore</packageId>
+			<displayName>Warhammer 40k - Core</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3025477432</steamWorkshopUrl>
+		</li>
+	</modDependencies>
+	<loadAfter>
+		<li>Ludeon.RimWorld</li>
+		<li>brrainz.harmony</li>
+		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
+		<li>Phonicmas.40kCore</li>
+	</loadAfter>
+</ModMetaData>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <PawnTableDef>
+    <defName>BEWH_ServitorPawnTable</defName>
+    <columns>
+      <li>Label</li>
+      <li>BEWH_ServitorAllowedArea</li>
+    </columns>
+    <minWidth>0</minWidth>
+  </PawnTableDef>
+
+</Defs>

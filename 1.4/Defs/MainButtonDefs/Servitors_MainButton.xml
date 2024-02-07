@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <MainButtonDef>
+    <defName>BEWH_ServitorMainButton</defName>
+    <label>servitors</label>
+    <description>Tracking colony's servitors.</description>
+    <tabWindowClass>Servitors40k.MainTabWindow_Servitors</tabWindowClass>
+    <order>42</order>
+  </MainButtonDef>
+
+</Defs>

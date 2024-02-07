@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Servitor Creation -->
+  <ResearchProjectDef>
+    <defName>BEWH_ServitorCreation</defName>
+    <label>Servitor Creation</label>
+    <description>Unlocks the ability to transform living pawns into Servitors and upgrade these with various upgrades.</description>
+    <techLevel>Spacer</techLevel>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <tab>BEWH_WH40kTab</tab>
+    <prerequisites>
+      <li>AdvancedFabrication</li>
+      <li>Bionics</li>
+    </prerequisites>
+    <baseCost>2000</baseCost>
+    <researchViewX>0</researchViewX>
+    <researchViewY>5</researchViewY>
+  </ResearchProjectDef>
+
+</Defs>

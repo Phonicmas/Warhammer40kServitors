@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BEWH_BaseServitorRace">
+    <defName>BEWH_ServitorUtility</defName>
+    <label>Servitor - Utility</label>
+    <description>Servitor built for utility such as carrying and basic work like flicking switches.</description>
+    <race>
+      <thinkTreeMain>BEWH_Servitor_Worker</thinkTreeMain>
+      <mechEnabledWorkTypes>
+        <li>Firefighter</li>
+        <li>BasicWorker</li>
+        <li>Hauling</li>
+        <li>Cleaning</li>
+      </mechEnabledWorkTypes>
+    </race>
+  </ThingDef>
+
+  <PawnKindDef ParentName="BEWH_BaseServitorPawn">
+    <defName>BEWH_ServitorUtility</defName>
+    <label>Servitor - Utility</label>
+    <race>BEWH_ServitorUtility</race>
+    <combatPower>50</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/Lancer</texPath>
+          <drawSize>1.5</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+</Defs>

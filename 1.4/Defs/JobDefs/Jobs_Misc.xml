@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <JobDef>
+    <defName>BEWH_EnterBuildingServitor</defName>
+    <driverClass>Servitors40k.JobDriver_EnterBuildingServitor</driverClass>
+    <reportString>entering TargetA.</reportString>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+
+</Defs>
