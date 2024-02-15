@@ -14,9 +14,9 @@
 
 7. Crafting servitor - Crafting skill
 
-8. Planting servitor? - Planting skill
+8. Planting servitor? - Planting skill - Not Implemented
 
-9. Cooking servitor? - Cooking skill
+9. Cooking servitor? - Cooking skill - Not Implemented
 
 ## TODO
 
@@ -24,5 +24,3 @@ Add event that causes random amount of player servitors to act out due to the wa
 
 Add the mechanic to make them able to break down, needing a pawn to carry them to a service station to repair them.
 Make recipe for the repair ^^ same for all
-
-Make recipe to allow to install different weapons on combat servitors
