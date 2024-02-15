@@ -14,9 +14,11 @@
 
 7. Crafting servitor - Crafting skill
 
-8. Planting servitor? - Planting skill - Not Implemented
+## Might be added
 
-9. Cooking servitor? - Cooking skill - Not Implemented
+1. Planting servitor? - Planting skill
+
+2. Cooking servitor? - Cooking skill
 
 ## TODO
 
