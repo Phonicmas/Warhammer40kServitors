@@ -3,14 +3,14 @@
 
   <!-- RecipeDef -->
   <RecipeDef>
-    <defName>BEWH_ServitorShootingAccuracyUpgrade</defName>
-    <label>install ocular tracking extension</label>
+    <defName>BEWH_ServitorMedicalToolsUpgrade</defName>
+    <label>install advanced medical tools</label>
     <workerClass>Servitors40k.Recipe_InstallImplantWithLevels_ServitorUpgrade</workerClass>
-    <description>Install ocular tracking extension, increasing shooting accuracy.</description>
+    <description>Install advanced medical tools, increasing medical speed and quality.</description>
     <descriptionHyperlinks>
-      <HediffDef>BEWH_ServitorShootingAccuracyUpgrade</HediffDef>
+      <HediffDef>BEWH_ServitorMedicalToolsUpgrade</HediffDef>
     </descriptionHyperlinks>
-    <jobString>Installing ocular tracking extension.</jobString>
+    <jobString>Installing advanced medical tools.</jobString>
     <workSkill>Crafting</workSkill>
     <skillRequirements>
       <Crafting>10</Crafting>
@@ -34,10 +34,10 @@
       <li>
         <filter>
           <thingDefs>
-            <li>Steel</li>
+            <li>Plasteel</li>
           </thingDefs>
         </filter>
-        <count>20</count>
+        <count>10</count>
       </li>
       <li>
         <filter>
@@ -45,57 +45,52 @@
             <li>ComponentSpacer</li>
           </thingDefs>
         </filter>
-        <count>2</count>
+        <count>1</count>
       </li>
     </ingredients>
     <fixedIngredientFilter>
       <thingDefs>
         <li>ComponentIndustrial</li>
-        <li>Steel</li>
+        <li>Plasteel</li>
         <li>ComponentSpacer</li>
       </thingDefs>
     </fixedIngredientFilter>
     <appliedOnFixedBodyParts>
-      <li>Eye</li>
+      <li>Arm</li>
     </appliedOnFixedBodyParts>
-    <addsHediff>BEWH_ServitorShootingAccuracyUpgrade</addsHediff>
+    <addsHediff>BEWH_ServitorMedicalToolsUpgrade</addsHediff>
     <modExtensions>
       <li Class="Servitors40k.DefModExtension_ServitorRecipeRequirement">
         <mustBeSpecialization>
-          <li>BEWH_ServitorGun</li>
+          <li>BEWH_ServitorMining</li>
         </mustBeSpecialization>
       </li>
     </modExtensions>
   </RecipeDef>
   <!-- HediffDef -->
   <HediffDef ParentName="ImplantHediffBase">
-    <defName>BEWH_ServitorShootingAccuracyUpgrade</defName>
-    <label>ocular tracking extension upgrade</label>
-    <labelNoun>ocular tracking extension upgrade</labelNoun>
-    <description>Installed ocular tracking extension upgrade.</description>
+    <defName>BEWH_ServitorMedicalToolsUpgrade</defName>
+    <label>advanced medical tool upgrade</label>
+    <labelNoun>advanced medical tool upgrade</labelNoun>
+    <description>Installed advanced medical tool upgrade.</description>
     <initialSeverity>0</initialSeverity>
     <minSeverity>0</minSeverity>
-    <maxSeverity>2</maxSeverity>
+    <maxSeverity>1</maxSeverity>
     <stages>
       <li>
         <label>Tier I</label>
         <minSeverity>0</minSeverity>
         <statOffsets>
-          <ShootingAccuracyPawn>0.5</ShootingAccuracyPawn>
+          <MedicalTendSpeed>0.05</MedicalTendSpeed>
+          <MedicalTendQuality>0.1</MedicalTendQuality>
         </statOffsets>
       </li>
       <li>
         <label>Tier II</label>
         <minSeverity>1</minSeverity>
         <statOffsets>
-          <ShootingAccuracyPawn>1</ShootingAccuracyPawn>
-        </statOffsets>
-      </li>
-      <li>
-        <label>Tier III</label>
-        <minSeverity>2</minSeverity>
-        <statOffsets>
-          <ShootingAccuracyPawn>1.5</ShootingAccuracyPawn>
+          <MedicalTendSpeed>0.12</MedicalTendSpeed>
+          <MedicalTendQuality>0.25</MedicalTendQuality>
         </statOffsets>
       </li>
     </stages>

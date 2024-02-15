@@ -10,10 +10,10 @@
     <skillLevels>
       <li>
         <key>Shooting</key>
-        <value>6</value>
+        <value>5</value>
       </li>
     </skillLevels>
-    <startingEquipment>Gun_ChargeBlasterHeavy</startingEquipment>
+    <startingEquipment>BEWH_ServitorStubCarbine</startingEquipment>
   </Servitors40k.ServitorSpecializationDef>
 
   <!-- Servitor Melee -->
@@ -25,10 +25,10 @@
     <skillLevels>
       <li>
         <key>Melee</key>
-        <value>6</value>
+        <value>5</value>
       </li>
     </skillLevels>
-    <startingEquipment>MeleeWeapon_Mace</startingEquipment>
+    <startingEquipment>BEWH_ServitorServoArm</startingEquipment>
   </Servitors40k.ServitorSpecializationDef>
 
   <!-- Servitor Utility -->

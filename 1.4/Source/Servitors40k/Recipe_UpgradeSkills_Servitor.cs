@@ -11,9 +11,46 @@ namespace Servitors40k
         {
             Building_ServitorUpgrade building = (Building_ServitorUpgrade)billDoer.CurJob.targetA;
 
-            Pawn servitor = building.SelectedPawn;
+            Servitor servitor = (Servitor)building.SelectedPawn;
 
-            //Increase servitor skill here
+            ServitorSpecializationDef chosenSpecialization = servitor.specialization;
+
+            if (servitor.def.race.mechEnabledWorkTypes != null)
+            {
+                foreach (WorkTypeDef mechEnabledWorkType in servitor.def.race.mechEnabledWorkTypes)
+                {
+                    foreach (SkillDef skill in mechEnabledWorkType.relevantSkills)
+                    {
+                        SkillRecord skillRecord = servitor.skills.skills.Find((SkillRecord rec) => rec.def == skill);
+                        skillRecord.levelInt += 5;
+                    }
+                    servitor.workSettings.SetPriority(mechEnabledWorkType, 1);
+                }
+            }
+            if (chosenSpecialization != null)
+            {
+                if (!chosenSpecialization.skillLevels.NullOrEmpty())
+                {
+                    foreach (KeyValuePair<SkillDef, int> skills in chosenSpecialization.skillLevels)
+                    {
+                        SkillRecord skillRecord = servitor.skills.skills.Find((SkillRecord rec) => rec.def == skills.Key);
+                        skillRecord.levelInt += 5;
+                    }
+                }
+            }
+
+            if (recipe.addsHediff != null)
+            {
+                if (servitor.health.hediffSet.HasHediff(recipe.addsHediff))
+                {
+                    servitor.health.hediffSet.GetFirstHediffOfDef(recipe.addsHediff).Severity += 1;
+                }
+                else
+                {
+                    servitor.health.AddHediff(recipe.addsHediff, GetParts(servitor, recipe).FirstOrDefault()); ;
+                }
+            }
+            
         }
 
         public override bool AvailableOnNow(Thing thing, BodyPartRecord part = null)
@@ -54,6 +91,22 @@ namespace Servitors40k
             }
 
             return true;
+        }
+
+        private IEnumerable<BodyPartRecord> GetParts(Pawn pawn, RecipeDef recipe)
+        {
+            return MedicalRecipesUtility.GetFixedPartsToApplyOn(recipe, pawn, delegate (BodyPartRecord record)
+            {
+                if (!pawn.health.hediffSet.GetNotMissingParts().Contains(record))
+                {
+                    return false;
+                }
+                if (pawn.health.hediffSet.PartOrAnyAncestorHasDirectlyAddedParts(record))
+                {
+                    return false;
+                }
+                return true;
+            });
         }
     }
 }

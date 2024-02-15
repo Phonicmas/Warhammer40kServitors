@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!--=== Guns ===-->
+
+  <ThingDef ParentName="BEWH_ServitorBaseGun">
+    <defName>BEWH_ServitorBolter</defName>
+    <label>servitor bolter</label>
+    <description>The Bolt Gun roars with ferocity as it launches self-propelled 0.75 caliber munitions that detonate upon contact, leaving a trail of devastation. This one is designed for servitor attatchment and usage.</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/ChargeRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_ChargeLance</soundInteract>
+    <statBases>
+      <Mass>4</Mass>
+      <AccuracyTouch>0.66</AccuracyTouch>
+      <AccuracyShort>0.77</AccuracyShort>
+      <AccuracyMedium>0.42</AccuracyMedium>
+      <AccuracyLong>0.20</AccuracyLong>
+      <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>BEWH_BolterBullet</defaultProjectile>
+        <warmupTime>1</warmupTime>
+        <burstShotCount>2</burstShotCount>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+        <range>33.9</range>
+        <soundCast>Shot_SniperRifle</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>BEWH_BolterBullet</defName>
+    <label>bolter bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Charge_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>BEWH_BolterBullet</damageDef>
+      <damageAmountBase>24</damageAmountBase>
+      <stoppingPower>1.5</stoppingPower>
+      <armorPenetrationBase>0.45</armorPenetrationBase>
+      <speed>90</speed>
+    </projectile>
+  </ThingDef>
+  <!-- RecipeDef -->
+  <RecipeDef ParentName="BEWH_ServitorInstallGunBase">
+    <defName>BEWH_ServitorBolter</defName>
+    <label>install bolter</label>
+    <workerClass>Servitors40k.Recipe_SwitchEquipment_Servitor</workerClass>
+    <description>Install bolter.</description>
+    <descriptionHyperlinks>
+      <ThingDef>BEWH_ServitorBolter</ThingDef>
+    </descriptionHyperlinks>
+    <jobString>Installing bolter.</jobString>
+    <skillRequirements>
+      <Crafting>10</Crafting>
+    </skillRequirements>
+    <workAmount>4000</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>50</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Plasteel</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ComponentIndustrial</li>
+        <li>Steel</li>
+        <li>Plasteel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <modExtensions>
+      <li Class="Servitors40k.DefModExtension_ServitorRecipeRequirement">
+        <mustBeSpecialization>
+          <li>BEWH_ServitorGun</li>
+        </mustBeSpecialization>
+        <weapon>BEWH_ServitorBolter</weapon>
+      </li>
+    </modExtensions>
+  </RecipeDef>
+
+</Defs>

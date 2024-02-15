@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="BaseGun" Name="BEWH_ServitorBaseGun" Abstract="True">
+    <smeltable>false</smeltable>
+    <destroyOnDrop>true</destroyOnDrop>
+    <relicChance>0</relicChance>
+    <weaponTags>
+      <li>BEWH_ServitorGun</li>
+    </weaponTags>
+    <tradeability>None</tradeability>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseWeapon" Name="BEWH_ServitorBaseMelee" Abstract="True">
+    <smeltable>false</smeltable>
+    <destroyOnDrop>true</destroyOnDrop>
+    <relicChance>0</relicChance>
+    <weaponTags>
+      <li>BEWH_ServitorMelee</li>
+    </weaponTags>
+    <tradeability>None</tradeability>
+    <thingCategories>
+      <li>WeaponsMelee</li>
+    </thingCategories>
+    <weaponClasses>
+      <li>Melee</li>
+    </weaponClasses>
+  </ThingDef>
+
+  <RecipeDef Name="BEWH_ServitorInstallGunBase" Abstract="True">
+    <workerClass>Servitors40k.Recipe_SwitchEquipment_Servitor</workerClass>
+    <workSkill>Crafting</workSkill>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Cremate</effectWorking>
+    <soundWorking>Recipe_Cremate</soundWorking>
+    <recipeUsers>
+      <li>BEWH_ServitorUpgrader</li>
+    </recipeUsers>
+  </RecipeDef>
+
+</Defs>

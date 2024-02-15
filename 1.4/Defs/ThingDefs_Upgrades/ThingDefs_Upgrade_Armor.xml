@@ -4,7 +4,7 @@
   <!-- RecipeDef -->
   <RecipeDef>
     <defName>BEWH_ServitorArmorUpgrade</defName>
-    <label>upgrade amor</label>
+    <label>upgrade armor</label>
     <workerClass>Servitors40k.Recipe_InstallImplantWithLevels_ServitorUpgrade</workerClass>
     <description>Upgrade armor, boosting the servitors defensive capabilities.</description>
     <descriptionHyperlinks>
@@ -15,7 +15,7 @@
     <skillRequirements>
       <Crafting>8</Crafting>
     </skillRequirements>
-    <workAmount>100</workAmount>
+    <workAmount>3000</workAmount>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <effectWorking>Cremate</effectWorking>
     <soundWorking>Recipe_Cremate</soundWorking>

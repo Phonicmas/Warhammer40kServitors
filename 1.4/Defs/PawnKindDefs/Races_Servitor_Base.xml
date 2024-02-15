@@ -17,7 +17,7 @@
       <ArmorRating_Blunt>0.4</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.4</ArmorRating_Sharp>
       <ArmorRating_Heat>1.65</ArmorRating_Heat>
-      <MoveSpeed>4</MoveSpeed>
+      <MoveSpeed>3.6</MoveSpeed>
     </statBases>
     <receivesSignals>true</receivesSignals>
     <race>
@@ -45,7 +45,7 @@
           <soundCall>Pawn_Mech_Scyther_Call</soundCall>
         </li>
       </lifeStageAges>
-      <mechFixedSkillLevel>8</mechFixedSkillLevel>
+      <mechFixedSkillLevel>5</mechFixedSkillLevel>
     </race>
     <butcherProducts>
       <Steel>30</Steel>

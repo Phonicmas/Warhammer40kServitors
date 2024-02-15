@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <DamageDef ParentName="Bullet">
+    <defName>BEWH_BolterBullet</defName>
+    <label>bolt</label>
+    <isExplosive>true</isExplosive>
+    <hediffSolid>Crack</hediffSolid>
+    <explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
+    <explosionHeatEnergyPerCell>4</explosionHeatEnergyPerCell>
+    <explosionCellFleck>BlastExtinguisher</explosionCellFleck>
+    <explosionColorCenter>(1, 0.5, 0.3)</explosionColorCenter>
+    <explosionColorEdge>(0.6, 0.5, 0.4)</explosionColorEdge>
+    <soundExplosion>Explosion_Bomb</soundExplosion>
+  </DamageDef>
+
+</Defs>

@@ -15,7 +15,7 @@
     <skillRequirements>
       <Crafting>10</Crafting>
     </skillRequirements>
-    <workAmount>100</workAmount>
+    <workAmount>5000</workAmount>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <effectWorking>Cremate</effectWorking>
     <soundWorking>Recipe_Cremate</soundWorking>

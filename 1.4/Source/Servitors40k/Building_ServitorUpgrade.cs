@@ -154,7 +154,10 @@ namespace Servitors40k
             ExitPawn();
             if (BillStack != null && BillStack.Count > 0)
             {
-                BillStack.FirstShouldDoNow.suspended = true;
+                if (billStack.FirstShouldDoNow != null)
+                {
+                    BillStack.FirstShouldDoNow.suspended = true;
+                }
                 BillStack.Clear();
             }
         }

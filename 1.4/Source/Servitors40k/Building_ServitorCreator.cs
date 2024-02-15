@@ -339,12 +339,15 @@ namespace Servitors40k
             if ((bool)CanAcceptPawn(pawn))
             {
                 selectedPawn = pawn;
+                IntVec3 pos = pawn.Position;
                 bool num = pawn.DeSpawnOrDeselect();
                 if (innerContainer.TryAddOrTransfer(pawn))
                 {
                     startTick = Find.TickManager.TicksGame;
                     Fuel.ConsumeFuel(fuelConsumption);
                     ticksRemaining = 2500;
+                    pawn.equipment.DropAllEquipment(pos);
+                    pawn.apparel.DropAll(pos);
                 }
                 if (num)
                 {
