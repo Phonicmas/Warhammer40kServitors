@@ -29,3 +29,5 @@ Add event that causes random amount of player servitors to act out due to the wa
 Add mod settings to disable or alter break chance percentage increase
 
 Make a research options for some of the later/better upgrades
+
+Make the upgrade machine delete upgrade bills from the service station once they can no longer be applied (For instance if you have armor ugrade 2, and upgrade it to 3, the bill is still there and you can perform it again (Nothing will happen tho))
