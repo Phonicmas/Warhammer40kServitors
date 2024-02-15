@@ -35,7 +35,7 @@ namespace Servitors40k
         public override void Tick()
         {
             base.Tick();
-            if (!beingServiced && !broken && this.IsHashIntervalTick(1000))
+            if (!beingServiced && !broken && this.IsHashIntervalTick(30000))
             {
                 Log.Message("Break Chance: " + breakChance);
                 Random rand = new Random();

@@ -7,7 +7,7 @@
     <label>servitor material kit</label>
     <description>A kit of materials commonly used for the creation of new servitors.</description>
     <graphicData>
-      <texPath>Things/Item/Servitor</texPath>
+      <texPath>Things/Item/Resource/ComponentSpacer</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
     </graphicData>
     <soundInteract>Metal_Drop</soundInteract>

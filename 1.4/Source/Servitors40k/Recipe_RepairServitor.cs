@@ -5,7 +5,7 @@ using Verse;
 
 namespace Servitors40k
 {
-    public class Recipe_RepairServitor : Recipe_RemoveHediff
+    public class Recipe_RepairServitor : RecipeWorker
     {
         public override bool AvailableOnNow(Thing thing, BodyPartRecord part = null)
         {
@@ -34,27 +34,19 @@ namespace Servitors40k
             return true;
         }
 
-        public override void ApplyOnPawn(Pawn pawn, BodyPartRecord part, Pawn billDoer, List<Thing> ingredients, Bill bill)
+        public override void Notify_IterationCompleted(Pawn billDoer, List<Thing> ingredients)
         {
-            if (billDoer != null)
-            {
-                TaleRecorder.RecordTale(TaleDefOf.DidSurgery, billDoer, pawn);
-                if (PawnUtility.ShouldSendNotificationAbout(pawn) || PawnUtility.ShouldSendNotificationAbout(billDoer))
-                {
-                    string text = (recipe.successfullyRemovedHediffMessage.NullOrEmpty() ? ((string)"MessageSuccessfullyRemovedHediff".Translate(billDoer.LabelShort, pawn.LabelShort, recipe.removesHediff.label.Named("HEDIFF"), billDoer.Named("SURGEON"), pawn.Named("PATIENT"))) : ((string)recipe.successfullyRemovedHediffMessage.Formatted(billDoer.LabelShort, pawn.LabelShort)));
-                    Messages.Message(text, pawn, MessageTypeDefOf.PositiveEvent);
-                }
-            }
-            Hediff hediff = pawn.health.hediffSet.hediffs.Find((Hediff x) => x.def == recipe.removesHediff);
+            Building_ServitorUpgrade building = (Building_ServitorUpgrade)billDoer.CurJob.targetA;
+
+            Servitor servitor = (Servitor)building.SelectedPawn;
+
+            Hediff hediff = servitor.health.hediffSet.hediffs.Find((Hediff x) => x.def == recipe.removesHediff);
             if (hediff != null)
             {
-                pawn.health.RemoveHediff(hediff);
+                servitor.health.RemoveHediff(hediff);
             }
-            if (pawn is Servitor servitor)
-            {
-                servitor.broken = false;
-                servitor.breakChance = 2;
-            }
+            servitor.broken = false;
+            servitor.breakChance = 2;
         }
     }
 }
