@@ -22,5 +22,8 @@
 
 Add event that causes random amount of player servitors to act out due to the warp and go beserk
 
-Add the mechanic to make them able to break down, needing a pawn to carry them to a service station to repair them.
-Make recipe for the repair ^^ same for all
+## Ideas
+
+Add mod settings to disable or alter break chance percentage increase
+
+Make a research options for some of the later/better upgrades

@@ -145,8 +145,10 @@ namespace Servitors40k
             }
             if (innerContainer != null)
             {
+                Servitor servitor = (Servitor)innerContainer.First();
+                servitor.beingServiced = false;
                 innerContainer.TryDropAll(def.hasInteractionCell ? InteractionCell : base.Position, base.Map, ThingPlaceMode.Near);
-            }
+            }   
         }
 
         private void ExitPawnCancel()
@@ -169,6 +171,8 @@ namespace Servitors40k
                 selectedPawn = pawn;
                 bool num = pawn.DeSpawnOrDeselect();
                 innerContainer.TryAddOrTransfer(pawn);
+                Servitor servitor = (Servitor)innerContainer.First();
+                servitor.beingServiced = true;
                 if (num)
                 {
                     Find.Selector.Select(pawn, playSound: false, forceDesignatorDeselect: false);
@@ -277,11 +281,29 @@ namespace Servitors40k
                     }
                     else
                     {
-                        list.Add(new FloatMenuOption(text, delegate
+                        if (pawn.Downed)
                         {
-                            SelectPawn(pawn);
-                        }, pawn, Color.white));
-
+                            Pawn carrier = Map.mapPawns.FreeColonistsSpawned.Find(x => x.workSettings.WorkIsActive(WorkTypeDefOf.Crafting));
+                            if (carrier == null)
+                            {
+                                carrier = Map.mapPawns.FreeColonistsSpawned.RandomElement();
+                            }
+                            list.Add(new FloatMenuOption(text, delegate
+                            {
+                                carrier.jobs.TryTakeOrderedJob(JobMaker.MakeJob(Servitors40kDefOf.BEWH_CarryToBuildingServitor, this, pawn), JobTag.Misc);
+                                if (carrier.jobs.curJob.count <= 0)
+                                {
+                                    carrier.jobs.curJob.count = 1;
+                                }
+                            }, pawn, Color.white));
+                        }
+                        else
+                        {
+                            list.Add(new FloatMenuOption(text, delegate
+                            {
+                                SelectPawn(pawn);
+                            }, pawn, Color.white));
+                        }
                     }
                 }
                 if (!list.Any())

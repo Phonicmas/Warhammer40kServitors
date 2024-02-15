@@ -14,10 +14,10 @@ namespace Servitors40k
     public class Building_ServitorCreator : Building_Enterable, IThingHolderWithDrawnPawn, IThingHolder
     {
         //Let it be determined by the specializationDef
-        private int ticksRemaining = 2500;
+        private int ticksRemaining = 60000;
 
         //Let it be determined by the specializationDef
-        private int fuelConsumption = 10;
+        private int fuelConsumption = 2;
 
         private int powerCutTicks;
 

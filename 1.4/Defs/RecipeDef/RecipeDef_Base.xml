@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<RecipeDef Name="BEWH_ServitorUpgradeBase" Abstract="True">
+		<recipeUsers>
+			<li>BEWH_ServitorUpgrader</li>
+		</recipeUsers>
+		<researchPrerequisites>
+			<li>BEWH_ServitorCreation</li>
+		</researchPrerequisites>
+	</RecipeDef>
+
+</Defs>

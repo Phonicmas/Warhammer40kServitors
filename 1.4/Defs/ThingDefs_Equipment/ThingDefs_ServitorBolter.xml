@@ -66,10 +66,9 @@
     </projectile>
   </ThingDef>
   <!-- RecipeDef -->
-  <RecipeDef ParentName="BEWH_ServitorInstallGunBase">
+  <RecipeDef ParentName="BEWH_ServitorInstallEquipmentBase">
     <defName>BEWH_ServitorBolter</defName>
     <label>install bolter</label>
-    <workerClass>Servitors40k.Recipe_SwitchEquipment_Servitor</workerClass>
     <description>Install bolter.</description>
     <descriptionHyperlinks>
       <ThingDef>BEWH_ServitorBolter</ThingDef>

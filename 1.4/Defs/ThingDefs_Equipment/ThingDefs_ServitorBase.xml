@@ -27,15 +27,12 @@
     </weaponClasses>
   </ThingDef>
 
-  <RecipeDef Name="BEWH_ServitorInstallGunBase" Abstract="True">
+  <RecipeDef ParentName="BEWH_ServitorUpgradeBase" Name="BEWH_ServitorInstallEquipmentBase" Abstract="True">
     <workerClass>Servitors40k.Recipe_SwitchEquipment_Servitor</workerClass>
     <workSkill>Crafting</workSkill>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <effectWorking>Cremate</effectWorking>
     <soundWorking>Recipe_Cremate</soundWorking>
-    <recipeUsers>
-      <li>BEWH_ServitorUpgrader</li>
-    </recipeUsers>
   </RecipeDef>
 
 </Defs>

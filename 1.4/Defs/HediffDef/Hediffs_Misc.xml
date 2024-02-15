@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<HediffDef>
+		<defName>BEWH_ServitorBroken</defName>
+		<label>broken</label>
+		<description>This servitor has broken down and require repair to function again.</description>
+		<everCurableByItem>false</everCurableByItem>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.15</setMax>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<RecipeDef ParentName="BEWH_ServitorUpgradeBase">
+		<defName>BEWH_RepairServitor</defName>
+		<label>repair servitor</label>
+		<description>Repair a broken servitor</description>
+		<workerClass>Servitors40k.Recipe_RepairServitor</workerClass>
+		<jobString>repairing TargetA.</jobString>
+		<successfullyRemovedHediffMessage>{0} repaired {1}.</successfullyRemovedHediffMessage>
+		<removesHediff>BEWH_ServitorBroken</removesHediff>
+		<workAmount>5000</workAmount>
+		<hideBodyPartNames>true</hideBodyPartNames>
+		<targetsBodyPart>false</targetsBodyPart>
+		<ingredients Inherit="False">
+			<li>
+				<filter>
+					<thingDefs>
+						<li>BEWH_ServitorCreationMaterial</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>BEWH_ServitorCreationMaterial</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+
+</Defs>

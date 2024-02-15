@@ -66,10 +66,9 @@
     </projectile>
   </ThingDef>
   <!-- RecipeDef -->
-  <RecipeDef ParentName="BEWH_ServitorInstallGunBase">
+  <RecipeDef ParentName="BEWH_ServitorInstallEquipmentBase">
     <defName>BEWH_ServitorStubCarbine</defName>
     <label>install stub carbine</label>
-    <workerClass>Servitors40k.Recipe_SwitchEquipment_Servitor</workerClass>
     <description>Install stub carbine.</description>
     <descriptionHyperlinks>
       <ThingDef>BEWH_ServitorStubCarbine</ThingDef>

@@ -9,6 +9,9 @@ namespace Servitors40k
         public static ServitorSpecializationDef BEWH_ServitorUtility;
 
         public static JobDef BEWH_EnterBuildingServitor;
+        public static JobDef BEWH_CarryToBuildingServitor;
+
+        public static HediffDef BEWH_ServitorBroken;
 
         static Servitors40kDefOf()
         {

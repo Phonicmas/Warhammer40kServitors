@@ -2,7 +2,7 @@
 <Defs>
 
   <!-- RecipeDef -->
-  <RecipeDef>
+  <RecipeDef ParentName="BEWH_ServitorUpgradeBase">
     <defName>BEWH_ServitorMedicalToolsUpgrade</defName>
     <label>install advanced medical tools</label>
     <workerClass>Servitors40k.Recipe_InstallImplantWithLevels_ServitorUpgrade</workerClass>
@@ -19,9 +19,6 @@
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <effectWorking>Cremate</effectWorking>
     <soundWorking>Recipe_Cremate</soundWorking>
-    <recipeUsers>
-      <li>BEWH_ServitorUpgrader</li>
-    </recipeUsers>
     <ingredients>
       <li>
         <filter>

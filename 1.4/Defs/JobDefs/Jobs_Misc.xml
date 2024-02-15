@@ -8,4 +8,11 @@
     <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
   </JobDef>
 
+  <JobDef>
+    <defName>BEWH_CarryToBuildingServitor</defName>
+    <driverClass>Servitors40k.JobDriver_CarryToBuildingServitor</driverClass>
+    <reportString>carrying TargetB to TargetA.</reportString>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+
 </Defs>
