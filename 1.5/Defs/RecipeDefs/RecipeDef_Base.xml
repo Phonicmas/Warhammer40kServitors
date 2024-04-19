@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<RecipeDef Name="BEWH_ServitorUpgradeBase" Abstract="True">
+		<recipeUsers>
+			<li>BEWH_ServitorUpgrader</li>
+		</recipeUsers>
+		<researchPrerequisites>
+			<li>BEWH_ServitorCreation</li>
+		</researchPrerequisites>
+		<workSkill>Crafting</workSkill>
+		<skillRequirements>
+			<Crafting>8</Crafting>
+		</skillRequirements>
+		<workAmount>4000</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Cremate</effectWorking>
+		<soundWorking>Recipe_Cremate</soundWorking>
+	</RecipeDef>
+
+</Defs>

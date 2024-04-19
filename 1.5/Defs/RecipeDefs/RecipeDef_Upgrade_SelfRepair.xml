@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- RecipeDef -->
+  <RecipeDef ParentName="BEWH_ServitorUpgradeBase">
+    <defName>BEWH_ServitorSelfRepairUpgrade</defName>
+    <label>install self-repair mechanism</label>
+    <workerClass>Servitors40k.Recipe_InstallImplantWithLevels_ServitorUpgrade</workerClass>
+    <description>Upgrade self-repair mechanism, allowing the servitor to repair non-fatal damage.</description>
+    <descriptionHyperlinks>
+      <HediffDef>BEWH_ServitorSelfRepairUpgrade</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Upgrading self-repair mechanism.</jobString>
+    <skillRequirements>
+      <Crafting>12</Crafting>
+    </skillRequirements>
+    <workAmount>8000</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>3</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Plasteel</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentSpacer</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ComponentIndustrial</li>
+        <li>Plasteel</li>
+        <li>Steel</li>
+        <li>ComponentSpacer</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Torso</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>BEWH_ServitorSelfRepairUpgrade</addsHediff>
+  </RecipeDef>
+  <!-- HediffDef -->
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>BEWH_ServitorSelfRepairUpgrade</defName>
+    <label>self-repair mechanism upgrade</label>
+    <labelNoun>self-repair mechanism upgrade</labelNoun>
+    <description>Installed self-repair mechanism upgrade.</description>
+    <initialSeverity>1</initialSeverity>
+    <minSeverity>1</minSeverity>
+    <maxSeverity>2</maxSeverity>
+    <stages>
+      <li>
+        <label>Tier I</label>
+        <minSeverity>1</minSeverity>
+      </li>
+      <li>
+        <label>Tier II</label>
+        <minSeverity>2</minSeverity>
+      </li>
+    </stages>
+    <comps>
+      <li Class="Servitors40k.HediffCompProperties_SelfRepair">
+        <tickInterval>5000</tickInterval>
+      </li>
+    </comps>
+  </HediffDef>
+
+</Defs>

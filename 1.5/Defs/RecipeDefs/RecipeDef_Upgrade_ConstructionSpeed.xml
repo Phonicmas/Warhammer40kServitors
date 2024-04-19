@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- RecipeDef -->
+  <RecipeDef ParentName="BEWH_ServitorUpgradeBase">
+    <defName>BEWH_ServitorConstructionSpeedUpgrade</defName>
+    <label>install structural integrity analyzer</label>
+    <workerClass>Servitors40k.Recipe_InstallImplantWithLevels_ServitorUpgrade</workerClass>
+    <description>Install structural integrity analyzer, increasing construction speed and repair speed.</description>
+    <descriptionHyperlinks>
+      <HediffDef>BEWH_ServitorConstructionSpeedUpgrade</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing structural integrity analyzer.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>3</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Plasteel</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentSpacer</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ComponentIndustrial</li>
+        <li>Plasteel</li>
+        <li>Steel</li>
+        <li>ComponentSpacer</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Brain</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>BEWH_ServitorConstructionSpeedUpgrade</addsHediff>
+    <modExtensions>
+      <li Class="Servitors40k.DefModExtension_ServitorRecipeRequirement">
+        <mustBeSpecialization>
+          <li>BEWH_ServitorConstruction</li>
+        </mustBeSpecialization>
+      </li>
+    </modExtensions>
+  </RecipeDef>
+  <!-- HediffDef -->
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>BEWH_ServitorConstructionSpeedUpgrade</defName>
+    <label>structural integrity analyzer upgrade</label>
+    <labelNoun>structural integrity analyzer upgrade</labelNoun>
+    <description>Installed structural integrity analyzer upgrade.</description>
+    <initialSeverity>0</initialSeverity>
+    <minSeverity>0</minSeverity>
+    <maxSeverity>1</maxSeverity>
+    <stages>
+      <li>
+        <label>Tier I</label>
+        <minSeverity>0</minSeverity>
+        <statOffsets>
+          <ConstructionSpeed>0.1</ConstructionSpeed>
+        </statOffsets>
+      </li>
+      <li>
+        <label>Tier II</label>
+        <minSeverity>1</minSeverity>
+        <statOffsets>
+          <ConstructionSpeed>0.25</ConstructionSpeed>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>

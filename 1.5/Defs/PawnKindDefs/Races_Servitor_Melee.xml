@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BEWH_BaseServitorRace">
+    <defName>BEWH_ServitorMelee</defName>
+    <label>Servitor - Melee</label>
+    <description>Servitor built for melee combat.</description>
+    <race>
+      <thinkTreeMain>BEWH_Servitor_Violent</thinkTreeMain>
+    </race>
+    <comps>
+      <li Class="AnimalBehaviours.CompProperties_Draftable">
+        <makeNonFleeingToo>true</makeNonFleeingToo>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <PawnKindDef ParentName="BEWH_BaseServitorPawn">
+    <defName>BEWH_ServitorMelee</defName>
+    <label>Servitor - Melee</label>
+    <race>BEWH_ServitorMelee</race>
+    <combatPower>180</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/Lancer</texPath>
+          <drawSize>1.5</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+</Defs>

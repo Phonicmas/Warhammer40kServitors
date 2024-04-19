@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- RecipeDef -->
+  <RecipeDef ParentName="BEWH_ServitorUpgradeBase">
+    <defName>BEWH_ServitorMiningYieldUpgrade</defName>
+    <label>install mineral extractors</label>
+    <workerClass>Servitors40k.Recipe_InstallImplantWithLevels_ServitorUpgrade</workerClass>
+    <description>Install mineral extractors, increasing mining yields.</description>
+    <descriptionHyperlinks>
+      <HediffDef>BEWH_ServitorMiningYieldUpgrade</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing mineral extractors.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>3</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentSpacer</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ComponentIndustrial</li>
+        <li>Steel</li>
+        <li>ComponentSpacer</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Arm</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>BEWH_ServitorMiningYieldUpgrade</addsHediff>
+    <modExtensions>
+      <li Class="Servitors40k.DefModExtension_ServitorRecipeRequirement">
+        <mustBeSpecialization>
+          <li>BEWH_ServitorMining</li>
+        </mustBeSpecialization>
+      </li>
+    </modExtensions>
+  </RecipeDef>
+  <!-- HediffDef -->
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>BEWH_ServitorMiningYieldUpgrade</defName>
+    <label>mineral extractor upgrade</label>
+    <labelNoun>mineral extractor upgrade</labelNoun>
+    <description>Installed mineral extractor upgrade.</description>
+    <initialSeverity>0</initialSeverity>
+    <minSeverity>0</minSeverity>
+    <maxSeverity>1</maxSeverity>
+    <stages>
+      <li>
+        <label>Tier I</label>
+        <minSeverity>0</minSeverity>
+        <statOffsets>
+          <MiningYield>0.35</MiningYield>
+        </statOffsets>
+      </li>
+      <li>
+        <label>Tier II</label>
+        <minSeverity>1</minSeverity>
+        <statOffsets>
+          <MiningYield>0.75</MiningYield>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>

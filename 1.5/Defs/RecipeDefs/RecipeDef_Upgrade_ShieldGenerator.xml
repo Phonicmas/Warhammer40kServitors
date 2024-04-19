@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- RecipeDef -->
+  <RecipeDef ParentName="BEWH_ServitorUpgradeBase">
+    <defName>BEWH_ServitorShieldGeneratorUpgrade</defName>
+    <label>install defensive shield generator</label>
+    <workerClass>Servitors40k.Recipe_AddApparel_Servitor</workerClass>
+    <description>Install defensive shield generator, giving a shield that can block ranged weaponry.</description>
+    <jobString>Installing defensive shield generator.</jobString>
+    <skillRequirements>
+			<Crafting>12</Crafting>
+		</skillRequirements>
+		<workAmount>7000</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Plasteel</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentSpacer</li>
+          </thingDefs>
+        </filter>
+        <count>3</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ComponentIndustrial</li>
+        <li>Plasteel</li>
+        <li>Steel</li>
+        <li>ComponentSpacer</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Eye</li>
+    </appliedOnFixedBodyParts>
+    <modExtensions>
+      <li Class="Servitors40k.DefModExtension_ServitorRecipeRequirement">
+        <mustBeSpecialization>
+          <li>BEWH_ServitorMelee</li>
+        </mustBeSpecialization>
+        <armor>BEWH_ServitorDefensiveShield</armor>
+      </li>
+    </modExtensions>
+  </RecipeDef>
+
+</Defs>

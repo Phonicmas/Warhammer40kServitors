@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <IncidentDef>
+    <defName>BEWH_ServitorBerserk</defName>
+    <label>berserking servitors</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>Servitors40k.IncidentWorker_ServitorBerserk</workerClass>
+    <baseChance>0.5</baseChance>
+  </IncidentDef>
+
+</Defs>

@@ -16,18 +16,17 @@
 
 ## Might be added
 
-1. Planting servitor? - Planting skill
+1. Cooking servitor? - Cooking skill
 
-2. Cooking servitor? - Cooking skill
+2. Research servitor? - Intellectual skill
 
 ## TODO
 
-Add event that causes random amount of player servitors to act out due to the warp and go beserk
 
 ## Ideas
 
-Add mod settings to disable or alter break chance percentage increase
-
 Make a research options for some of the later/better upgrades
 
+
+## TODO
 Make the upgrade machine delete upgrade bills from the service station once they can no longer be applied (For instance if you have armor ugrade 2, and upgrade it to 3, the bill is still there and you can perform it again (Nothing will happen tho))

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- RecipeDef -->
+  <RecipeDef ParentName="BEWH_ServitorUpgradeBase">
+    <defName>BEWH_ServitorCleaningAppendagesUpgrade</defName>
+    <label>install cleaning appendages</label>
+    <workerClass>Servitors40k.Recipe_InstallImplantWithLevels_ServitorUpgrade</workerClass>
+    <description>Install cleaning appendages, increasing mining yields.</description>
+    <descriptionHyperlinks>
+      <HediffDef>BEWH_ServitorCleaningAppendagesUpgrade</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing cleaning appendages.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>3</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentSpacer</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ComponentIndustrial</li>
+        <li>Steel</li>
+        <li>ComponentSpacer</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Torso</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>BEWH_ServitorCleaningAppendagesUpgrade</addsHediff>
+    <modExtensions>
+      <li Class="Servitors40k.DefModExtension_ServitorRecipeRequirement">
+        <mustBeSpecialization>
+          <li>BEWH_ServitorUtility</li>
+        </mustBeSpecialization>
+      </li>
+    </modExtensions>
+  </RecipeDef>
+  <!-- HediffDef -->
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>BEWH_ServitorCleaningAppendagesUpgrade</defName>
+    <label>cleaning appendages upgrade</label>
+    <labelNoun>cleaning appendages upgrade</labelNoun>
+    <description>Installed cleaning appendages upgrade.</description>
+    <initialSeverity>0</initialSeverity>
+    <minSeverity>0</minSeverity>
+    <maxSeverity>1</maxSeverity>
+    <stages>
+      <li>
+        <label>Tier I</label>
+        <minSeverity>0</minSeverity>
+        <statOffsets>
+          <CleaningSpeed>0.5</CleaningSpeed>
+        </statOffsets>
+      </li>
+      <li>
+        <label>Tier II</label>
+        <minSeverity>1</minSeverity>
+        <statOffsets>
+          <CleaningSpeed>1.5</CleaningSpeed>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>

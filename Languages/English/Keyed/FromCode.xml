@@ -1,23 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
-<ServitorNoPowerEject>{PAWN_labelShort} was ejected from a ????? due to lack of power.</ServitorNoPowerEject>
-<InsertPersonServitorCreationDesc>Insert a person into the ???. This will transform them into a Servitor.</InsertPersonServitorCreationDesc>
+    <ModSettingsNameServitors>Warhammer 40k - Servitors</ModSettingsNameServitors>
 
-<Colonist>Colonist</Colonist>
-<Slave>Slave</Slave>
-<Prisoner>Prisoner</Prisoner>
+    <disableRandomBreaks>Disables the random chance for servitors to break down, requiring repairs</disableRandomBreaks>
 
-<SelectSpecialization>Select Specialization</SelectSpecialization>
-<SelectSpecializationDesc>Select the specialization of the next servitor to be created.</SelectSpecializationDesc>
+    <ServitorNoPowerEject>{PAWN_labelShort} was ejected from a ????? due to lack of power.</ServitorNoPowerEject>
+    <InsertPersonServitorCreationDesc>Insert a person into the Servitor Assimilator. This will transform them into a Servitor.</InsertPersonServitorCreationDesc>
 
-<CreatingServitorFrom>Creating servitor out of {0}</CreatingServitorFrom>
+    <Colonist>Colonist</Colonist>
+    <Slave>Slave</Slave>
+    <Prisoner>Prisoner</Prisoner>
 
-<UpgradeServitor>Upgrade {0} with {1}</UpgradeServitor>
+    <SelectSpecialization>Select Specialization</SelectSpecialization>
+    <SelectSpecializationDesc>Select the specialization of the next servitor to be created.</SelectSpecializationDesc>
 
-<UpgradeServitorLabel>Upgrade Servitor</UpgradeServitorLabel>
+    <CreatingServitorFrom>Creating servitor out of {0}</CreatingServitorFrom>
 
-<EjectServitor>Eject servitor</EjectServitor>
-<EjectServitorDesc>Eject servitor from the machine</EjectServitorDesc>
+    <UpgradeServitor>Upgrade {0} with {1}</UpgradeServitor>
+
+    <UpgradeServitorLabel>Upgrade Servitor</UpgradeServitorLabel>
+
+    <EjectServitor>Eject servitor</EjectServitor>
+    <EjectServitorDesc>Eject servitor from the machine</EjectServitorDesc>
+
+    <WaitingToChooseSpecialization>Waiting to choose specialization.</WaitingToChooseSpecialization>
+
+    <InsertServitor>Insert servitor</InsertServitor>
+    <InsertServitorUpgradeDesc>Insert a Servitor into the Servitor Service Station.</InsertServitorUpgradeDesc>
+
+    <UpgradingServitor>{0} getting serviced</UpgradingServitor>
 
 </LanguageData>
